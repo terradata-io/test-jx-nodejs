@@ -1,0 +1,122 @@
+
+Showing logs for build [32mterradata-io-test-jx-nodejs-mas-lz4js-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-wk898[0m
+{"level":"warn","ts":1586647662.2756927,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1586647662.2763343,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mterradata-io-test-jx-nodejs-mas-lz4js-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-8hxzd[0m
+{"level":"warn","ts":1586647663.6757739,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1586647663.6774802,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mterradata-io-test-jx-nodejs-mas-lz4js-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mterradata-io-test-jx-nodejs-mas-lz4js-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-terradata-io-test-jx-nodejs-mas-lz4js-c2m8l[0m
+{"level":"warn","ts":1586647699.7589068,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1586647700.900793,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/terradata-io/test-**-nodejs.git @ v0.0.1 in path /workspace/source"}
+
+Showing logs for build [32mterradata-io-test-jx-nodejs-mas-lz4js-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:45dd65c0e02af064dad8712cf647d32300afb48e
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mterradata-io-test-jx-nodejs-mas-lz4js-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mterradata-io-test-jx-nodejs-mas-lz4js-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mterradata-io-test-jx-nodejs-mas-lz4js-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN REPLACE_ME@1.0.0 No repository field.
+npm WARN REPLACE_ME@1.0.0 No license field.
+
+up to date in 0.885s
+found 0 vulnerabilities
+
+
+Showing logs for build [32mterradata-io-test-jx-nodejs-mas-lz4js-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> REPLACE_ME@1.0.0 test /workspace/source
+> echo "no test specified" && exit 0
+
+no test specified
+
+Showing logs for build [32mterradata-io-test-jx-nodejs-mas-lz4js-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0001] Resolved base name node:9-slim to node:9-slim 
+[36mINFO[0m[0001] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0001] Resolved base name node:9-slim to node:9-slim 
+[36mINFO[0m[0001] Retrieving image manifest node:9-slim        
+ERROR: logging before flag.Parse: E0411 23:28:26.811855       9 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E0411 23:28:26.815505       9 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0002] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0003] Built cross stage deps: map[]                
+[36mINFO[0m[0003] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0004] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0005] cmd: EXPOSE                                  
+[36mINFO[0m[0005] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0005] Checking for cached layer gcr.io/jenkinsx-273818/cache:cfafdb57e426f3263396833e3938b5c13b663f395f4e50f34f56b172f5d227fc... 
+[36mINFO[0m[0005] No cached layer found for cmd COPY . .       
+[36mINFO[0m[0005] Unpacking rootfs as cmd COPY . . requires it. 
+[36mINFO[0m[0011] Taking snapshot of full filesystem...        
+[36mINFO[0m[0012] Resolving paths                              
+[36mINFO[0m[0014] ENV PORT 8080                                
+[36mINFO[0m[0014] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0014] EXPOSE 8080                                  
+[36mINFO[0m[0014] cmd: EXPOSE                                  
+[36mINFO[0m[0014] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0014] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0014] WORKDIR /usr/src/app                         
+[36mINFO[0m[0014] cmd: workdir                                 
+[36mINFO[0m[0014] Changed working directory to /usr/src/app    
+[36mINFO[0m[0014] Creating directory /usr/src/app              
+[36mINFO[0m[0014] Resolving paths                              
+[36mINFO[0m[0014] Taking snapshot of files...                  
+[36mINFO[0m[0014] COPY . .                                     
+[36mINFO[0m[0014] Resolving paths                              
+[36mINFO[0m[0014] Taking snapshot of files...                  
+[36mINFO[0m[0014] Pushing layer gcr.io/jenkinsx-273818/cache:cfafdb57e426f3263396833e3938b5c13b663f395f4e50f34f56b172f5d227fc to cache now 
+[36mINFO[0m[0014] CMD ["npm", "start"]                         
+[36mINFO[0m[0014] No files changed in this command, skipping snapshotting. 
+
+Showing logs for build [32mterradata-io-test-jx-nodejs-mas-lz4js-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mterradata-io-test-jx-nodejs-mas-lz4js-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/test-**-nodejs to an unshallow repository
+Generating change log from git ref ad3b1767f7bedaecac2ff4d78537bf4a989ab4ff => a47d516c88d82bd5e754662270898794f12388e2
+Associating user x-0 in users.jenkins.io with email htaidirt@gmail.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 45dd65c0e02af064dad8712cf647d32300afb48e with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Finding issues in commit messages using git format
+WARNING: No release found for terradata-io/test-**-nodejs and tag v0.0.1 so creating a new release
+Updated the release information at https://github.com/terradata-io/test-**-nodejs/releases/tag/v0.0.1
+generated: /workspace/source/charts/test-**-nodejs/templates/release.yaml
+Created Release test-**-nodejs-0-0-1 resource in namespace **
+Updating PipelineActivity terradata-io-test-**-nodejs-master-1 with version 0.0.1
+Updated PipelineActivities terradata-io-test-**-nodejs-master-1 with release notes URL: https://github.com/terradata-io/test-**-nodejs/releases/tag/v0.0.1
+
+Showing logs for build [32mterradata-io-test-jx-nodejs-mas-lz4js-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file test-**-nodejs-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mterradata-io-test-jx-nodejs-mas-lz4js-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app test-**-nodejs version 0.0.1 to namespace **-staging
+WARNING: 
+WARNING: Waiting for the fork of ***********/environment-jenkinsx-staging to appear...
+Forked Git repository to https://github.com/***********/environment-jenkinsx-staging
+Created Pull Request: https://github.com/terradata-io/environment-jenkinsx-staging/pull/1
+Added label updatebot to Pull Request https://github.com/terradata-io/environment-jenkinsx-staging/pull/1
+got git provider status pending from PR https://github.com/terradata-io/environment-jenkinsx-staging/pull/1
+got git provider status pending from PR https://github.com/terradata-io/environment-jenkinsx-staging/pull/1
+got git provider status pending from PR https://github.com/terradata-io/environment-jenkinsx-staging/pull/1
+got git provider status pending from PR https://github.com/terradata-io/environment-jenkinsx-staging/pull/1
+Pull Request https://github.com/terradata-io/environment-jenkinsx-staging/pull/1 is merged at sha 12072484439ebdd6064482726f443429c7daf4db
+Pull Request merged but we are not waiting for the update pipeline to complete!
+WARNING: Could not find the service URL in namespace **-staging for names test-**-nodejs, **-test-**-nodejs, **-staging-test-**-nodejs
